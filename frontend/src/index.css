@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #0a0a0a;
+  --color-brand-panel: #1c1917;
+  --color-brand-red: #dc2626;
+  --color-brand-red-dark: #991b1b;
+  --color-brand-gray: #d4d4d8;
+  --color-brand-green: #22c55e;
+  --color-brand-amber: #f59e0b;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-gray font-mono m-0 min-h-screen;
+  }
+}
+
+/* CRT Scanline effect */
+.crt::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  z-index: 50;
+  pointer-events: none;
+}
+
+/* Vignette */
+.vignette::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 49;
+  pointer-events: none;
+}
