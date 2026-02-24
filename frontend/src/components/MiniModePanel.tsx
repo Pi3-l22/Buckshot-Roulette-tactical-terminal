@@ -92,6 +92,21 @@ export function MiniModePanel() {
         </div>
       </div>
 
+      
+      {/* Chamber Sequence */}
+      <div className="flex flex-wrap gap-1 justify-center bg-brand-panel/10 p-1 border border-brand-panel/50">
+         {store.knownSequence.map((b, i) => (
+           <div 
+             key={i} 
+             title={i === 0 ? "CURRENT" : ""}
+             className={`w-5 h-6 border flex items-center justify-center text-[10px] ${i === 0 ? 'border-brand-amber/50 animate-pulse bg-brand-panel/50' : 'border-brand-panel/30'}`}
+           >
+              {b === 'LIVE' ? '🔴' : b === 'BLANK' ? '⚪' : '?'}
+           </div>
+         ))}
+         {store.totalLive + store.totalBlank === 0 && <span className="text-[10px] text-brand-red animate-pulse tracking-widest">CHAMBER EMPTY</span>}
+      </div>
+
       {/* AI Advice (Mini) */}
       {topAdvice && (
         <div className={`p-1 border text-center text-[10px] ${topAdvice.tier === 'S' ? 'border-brand-red text-brand-red bg-brand-red/10 animate-pulse' : 'border-brand-panel text-brand-amber bg-brand-amber/5'}`}>

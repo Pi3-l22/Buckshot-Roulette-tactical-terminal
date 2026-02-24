@@ -1,5 +1,8 @@
 # Changelog / 更新日志
 
+## [v0.1.6] - 2026-02-24
+1. 🔍 **Mini Mode Sequence Tracker**: Added the Chamber Sequence visualization to the Mini Mode overlay. Players can now track the known live/blank bullet patterns directly from the miniature window without having to expand back to the full UI.
+
 ## [v0.1.5] - 2026-02-24
 1. ✨ **New Feature (Mini Mode)**: Added a "Mini Mode" button that shrinks the application window into a highly compact, always-on-top overlay. This allows users to easily track probabilities and log actions without obscuring the main game.
 2. 💄 **Compact UI Redesign**: Designed a specialized layout for the Mini Mode featuring icon-only inventory mapping, minimal modal popups, and condensed HP/radar trackers to maximize screen economy.
