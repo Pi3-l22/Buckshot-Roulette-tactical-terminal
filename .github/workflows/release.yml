@@ -1,0 +1,76 @@
+name: Release Build
+
+on:
+  push:
+    tags:
+      - 'v*' # Trigger on tags like v1.0.0
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        build:
+          - os: windows-latest
+            platform: windows/amd64
+            artifact_path: build/bin/buckshot-wails.exe
+            name: buckshot-tactical-terminal-windows-amd64.exe
+          - os: ubuntu-latest
+            platform: linux/amd64
+            artifact_path: build/bin/buckshot-wails
+            name: buckshot-tactical-terminal-linux-amd64
+          - os: macos-latest
+            platform: darwin/universal
+            artifact_path: build/bin/buckshot-wails.app
+            name: buckshot-tactical-terminal-macos.app
+
+    runs-on: ${{ matrix.build.os }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.23'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.1-dev build-essential pkg-config libnspr4-dev libnss3-dev libglib2.0-dev
+
+      - name: Install Wails
+        run: go install github.com/wailsapp/wails/v2/cmd/wails@latest
+
+      - name: Build Application
+        run: wails build -platform ${{ matrix.build.platform }} -clean
+
+      - name: Prepare macOS Artifact
+        if: runner.os == 'macOS'
+        run: |
+          cd build/bin
+          zip -r ../../buckshot-tactical-terminal-macos.zip buckshot-wails.app
+
+      - name: Rename Artifacts (Windows & Linux)
+        if: runner.os != 'macOS'
+        shell: bash
+        run: |
+          mv ${{ matrix.build.artifact_path }} ${{ matrix.build.name }}
+
+      - name: Upload Release Assets
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            buckshot-tactical-terminal-windows-amd64.exe
+            buckshot-tactical-terminal-linux-amd64
+            buckshot-tactical-terminal-macos.zip
+          generate_release_notes: true
+          draft: false
+          prerelease: false
