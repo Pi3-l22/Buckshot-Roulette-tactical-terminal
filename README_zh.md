@@ -1,8 +1,9 @@
 <div align="center">
-  <img src="./build/appicon.png" width="128" height="128" alt="OUTER HEAVEN Logo" />
+  <img src="./docs/cover.jpg" width="256" alt="OUTER HEAVEN Logo" />
   <h1>OUTER HEAVEN 战术终端</h1>
   <p><strong>《恶魔轮盘 (Buckshot Roulette)》进阶 AI 辅助决策工具及记牌器</strong></p>
   <p>别把命交给运气，让外挂大脑帮你算尽底牌。</p>
+
 
   [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
   [![Built with Wails](https://img.shields.io/badge/Built%20with-Wails-red.svg)](https://wails.io)
@@ -38,11 +39,9 @@
 
 ## 📸 界面预览
 
-*(请将你截图好的图片放到 `docs` 文件夹中并替换以下链接)*
+![setup](./docs/setup.png)
 
-| 雷达与战术建议 | 背包与开火操作 | 初始化配置 |
-|:---:|:---:|:---:|
-| `<img src="./docs/radar.png" width="250"/>` | `<img src="./docs/actions.png" width="250"/>` | `<img src="./docs/setup.png" width="250"/>` |
+![main](./docs/main.png)
 
 ---
 

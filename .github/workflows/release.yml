@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*' # Trigger on tags like v1.0.0
 
+permissions:
+  contents: write
+
 jobs:
   build:
     strategy:
@@ -22,7 +25,7 @@ jobs:
           - os: macos-latest
             platform: darwin/universal
             artifact_path: build/bin/buckshot-wails.app
-            name: buckshot-tactical-terminal-macos.app
+            name: buckshot-tactical-terminal-macos.zip
 
     runs-on: ${{ matrix.build.os }}
     steps:
@@ -55,7 +58,7 @@ jobs:
         if: runner.os == 'macOS'
         run: |
           cd build/bin
-          zip -r ../../buckshot-tactical-terminal-macos.zip buckshot-wails.app
+          zip -r ../../${{ matrix.build.name }} buckshot-wails.app
 
       - name: Rename Artifacts (Windows & Linux)
         if: runner.os != 'macOS'
@@ -67,10 +70,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: |
-            buckshot-tactical-terminal-windows-amd64.exe
-            buckshot-tactical-terminal-linux-amd64
-            buckshot-tactical-terminal-macos.zip
+          files: ${{ matrix.build.name }}
           generate_release_notes: true
           draft: false
           prerelease: false

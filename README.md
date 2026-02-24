@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./build/appicon.png" width="128" height="128" alt="OUTER HEAVEN Logo" />
+  <img src="./docs/cover.jpg" width="256" alt="OUTER HEAVEN Logo" />
   <h1>OUTER HEAVEN Tactical Terminal</h1>
   <p><strong>An advanced AI-powered tactical assistant and card counter for Buckshot Roulette.</strong></p>
   <p>Don't leave your life to chance. Let the AI calculate the odds.</p>
@@ -37,11 +37,9 @@
 
 ## 📸 Screenshots
 
-*(Add your screenshots here after uploading them to the `docs` folder!)*
+![setup](./docs/setup.png)
 
-| Radar & AI Advice | Inventory & Actions | Setup Screen |
-|:---:|:---:|:---:|
-| `<img src="./docs/radar.png" width="250"/>` | `<img src="./docs/actions.png" width="250"/>` | `<img src="./docs/setup.png" width="250"/>` |
+![main](./docs/main.png)
 
 ---
 
