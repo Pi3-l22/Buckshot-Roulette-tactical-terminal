@@ -1,9 +1,8 @@
 <div align="center">
-  <img src="./docs/cover.jpg" width="256" alt="OUTER HEAVEN Logo" />
-  <h1>OUTER HEAVEN 战术终端</h1>
-  <p><strong>《恶魔轮盘 (Buckshot Roulette)》进阶 AI 辅助决策工具及记牌器</strong></p>
-  <p>别把命交给运气，让外挂大脑帮你算尽底牌。</p>
-
+  <img src="./docs/cover.jpg" width="256" alt="Buckshot Roulette Tactical Terminal Logo" />
+  <h1>Buckshot Roulette 战术终端</h1>
+  <p><strong>《恶魔轮盘 (Buckshot Roulette)》进阶辅助决策工具及记牌器</strong></p>
+  <p>别把命交给运气，让逻辑算法帮你算尽底牌。</p>
 
   [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
   [![Built with Wails](https://img.shields.io/badge/Built%20with-Wails-red.svg)](https://wails.io)
@@ -16,8 +15,8 @@
 
 ## ☢️ 概览
 
-**OUTER HEAVEN 战术终端** 是一个轻量级、跨平台的桌面应用程序，旨在让你在《恶魔轮盘》这款游戏中获得绝对的博弈优势。
-程序采用了游戏原汁原味的废土风格、暗黑 CRT 终端 UI 界面，除了充当**完美的记牌器**之外，它内置的启发式 AI 引擎还能为你提供实时最优的**战术决策指导**。
+**Buckshot Roulette 战术终端** 是一个轻量级、跨平台的桌面应用程序，旨在让你在《恶魔轮盘》这款游戏中获得绝对的博弈优势。
+程序采用了游戏原汁原味的废土风格、暗黑 CRT 终端 UI 界面，除了充当**完美的记牌器**之外，它内置的启发式辅助算法还能为你提供实时最优的**战术决策指导**。
 
 > *不再靠蒙，用数学和逻辑终结庄家！*
 
@@ -26,7 +25,7 @@
 ## ✨ 核心功能
 
 * **实时概率雷达**：基于当前剩余的子弹，动态计算下一发为 实弹 (🔴) 还是 空包弹 (⚪) 的精准百分比概率。
-* **进阶版 AI 决策引擎**：根据你和庄家的血量、子弹序列概率、甚至你背包里的道具，提供 S/A/B/C 四个评级的操作建议：
+* **进阶版辅助决策引擎**：根据你和庄家的血量、子弹序列概率、甚至你背包里的道具，提供 S/A/B/C 四个评级的操作建议：
   * **[S级] 绝对斩杀**：检测到斩杀线时，提示必杀连招（例如使用 放大镜+逆转器+手锯 直接带走庄家）。
   * **[A级] 绝对收益**：在确定信息的情况下推荐最佳动作（如确认为空弹时打自己白嫖回合，或者优先吃烟回血）。
   * **[B级] 探测与控场**：在信息不足时推荐使用 手机、放大镜 等道具。
@@ -51,7 +50,7 @@
 
 1. 前往本仓库的 [**Releases (发布页面)**](https://github.com/Pi3-l22/Buckshot-Roulette-tactical-terminal/releases)。
 2. 下载最新的 Windows 应用程序（`buckshot-tactical-terminal-windows-amd64.exe`）。
-3. 运行即可开启你的外挂大脑。
+3. 运行即可开启你的辅助大脑。
 
 > **致 macOS 和 Linux 用户的注意**：因 CI 自动构建错误，针对这两个平台的自动编译文件已被暂时移除。如果您正在使用这两个平台，请参考下方的“**本地构建说明**”章节从源码构建属于您的执行文件。
 
@@ -68,7 +67,7 @@
 
 ## 🚀 本地构建说明 (针对 Linux / macOS 或二次开发)
 
-如果你是一名词猿，想要修改 AI 逻辑，或者你需要为 **macOS 和 Linux** 编译该应用：
+如果你是一名词猿，想要修改决策逻辑，或者你需要为 **macOS 和 Linux** 编译该应用：
 
 ### 环境准备
 - [Go 1.23+](https://go.dev/dl/)
@@ -99,12 +98,12 @@
 
 ## 🤝 贡献与参与
 
-欢迎提供任何改进意见！不管你是想优化界面、提升 AI 的胜率、或者修复 bug，欢迎提交 Pull Request (PR)。
+欢迎提供任何改进意见！不管你是想优化界面、提升决策算法的胜率、或者修复 bug，欢迎提交 Pull Request (PR)。
 
 1. Fork 本仓库。
-2. 创建新分支 (`git checkout -b feature/better-ai`)。
-3. 提交代码 (`git commit -m 'feat: improve ai accuracy'`)。
-4. 推送分支 (`git push origin feature/better-ai`)。
+2. 创建新分支 (`git checkout -b feature/better-logic`)。
+3. 提交代码 (`git commit -m 'feat: improve logic accuracy'`)。
+4. 推送分支 (`git push origin feature/better-logic`)。
 5. 提交 PR。
 
 ## 📄 开源协议

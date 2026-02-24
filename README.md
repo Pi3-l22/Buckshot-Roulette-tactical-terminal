@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="./docs/cover.jpg" width="256" alt="OUTER HEAVEN Logo" />
-  <h1>OUTER HEAVEN Tactical Terminal</h1>
-  <p><strong>An advanced AI-powered tactical assistant and card counter for Buckshot Roulette.</strong></p>
-  <p>Don't leave your life to chance. Let the AI calculate the odds.</p>
+  <img src="./docs/cover.jpg" width="256" alt="Buckshot Roulette Tactical Terminal Logo" />
+  <h1>Buckshot Roulette Tactical Terminal</h1>
+  <p><strong>An advanced tactical assistant and card counter for Buckshot Roulette.</strong></p>
+  <p>Don't leave your life to chance. Let the logic calculate the odds.</p>
 
   [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
   [![Built with Wails](https://img.shields.io/badge/Built%20with-Wails-red.svg)](https://wails.io)
@@ -15,7 +15,7 @@
 
 ## ☢️ Overview
 
-**OUTER HEAVEN Tactical Terminal** is a cross-platform desktop application designed to give you the ultimate edge in *Buckshot Roulette*. Built with a dark, wasteland-style CRT terminal interface, it not only tracks the state of the gun but also uses a heuristically evaluated AI decision tree to recommend the absolute best course of action at any given moment.
+**Buckshot Roulette Tactical Terminal** is a cross-platform desktop application designed to give you the ultimate edge in *Buckshot Roulette*. Built with a dark, wasteland-style CRT terminal interface, it not only tracks the state of the gun but also uses a heuristically evaluated decision tree to recommend the absolute best course of action at any given moment.
 
 > *Never guess again. Know your odds, track your items, and secure the kill.*
 
@@ -24,7 +24,7 @@
 ## ✨ Core Features
 
 * **Real-time Probability Radar**: Instantly calculates the exact probability of the next shot being LIVE (🔴) or BLANK (⚪) based on the remaining unknown bullets.
-* **AI Decision Engine**: Provides tiered tactical advice (S/A/B/C):
+* **Decision Assist Engine**: Provides tiered tactical advice (S/A/B/C):
   * **[S-Tier] Absolute Kill**: Recommends lethal combos (e.g., Inverter + Handsaw) when lethal damage is guaranteed.
   * **[A-Tier] High Value**: Recommends using Cigarettes or taking a safe shot at yourself for an extra turn.
   * **[B-Tier] Information Gathering**: Suggests using the Magnifying Glass, Burner Phone, or Adrenaline when blind.
@@ -97,7 +97,7 @@ If you want to modify the code, or if you need to build the executable for **mac
 
 ## 🤝 Contributing
 
-Pull requests are welcome! If you have ideas for better AI strategies, new UI themes, or bug fixes:
+Pull requests are welcome! If you have ideas for better decision strategies, new UI themes, or bug fixes:
 1. Fork the repo.
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
