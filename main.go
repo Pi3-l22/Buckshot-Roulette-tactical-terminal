@@ -11,9 +11,6 @@ import (
 //go:embed all:frontend/dist
 var assets embed.FS
 
-//go:embed build/appicon.png
-var icon []byte
-
 func main() {
 	// Create an instance of the app structure
 	app := NewApp()
@@ -25,7 +22,6 @@ func main() {
 		Height:    768,
 		MinWidth:  800,
 		MinHeight: 600,
-		Icon:      icon,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},

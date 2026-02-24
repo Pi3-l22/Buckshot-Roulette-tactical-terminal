@@ -1,5 +1,9 @@
 # Changelog / 更新日志
 
+## [v0.1.4] - 2026-02-24
+1. 🐛 **Build Fix**: Fixed a compilation error in `main.go` that broke the GitHub Actions release pipeline during the v0.1.3 build.
+2. 🖼️ **Icon Persistence**: The new app icon is now properly embedded during the build phase by utilizing the Wails built-in resource generator instead of manual `options.App` struct overrides.
+
 ## [v0.1.3] - 2026-02-24
 1. 📝 **Documentation Rewritten**: Renamed the tool to "Buckshot Roulette Tactical Terminal" and removed all "AI" terminology to avoid misunderstandings, clarifying that the tool is a "Decision Assist" feature using heuristics and probability calculation.
 2. 🖼️ **Icon and Metadata Fixes**: Fixed the application's executable `.exe` file icon and window icon to properly reflect the custom logo rather than Wails' default icon.
