@@ -15,16 +15,20 @@ function App() {
   const isSetup = (store.totalLive + store.totalBlank > 0);
 
   const toggleMiniMode = () => {
-    if (!isMiniMode) {
-      WindowSetMinSize(300, 300);
-      WindowSetSize(350, 480);
-      WindowSetAlwaysOnTop(true);
-      setIsMiniMode(true);
-    } else {
-      WindowSetMinSize(800, 600);
-      WindowSetSize(1024, 768);
-      WindowSetAlwaysOnTop(false);
-      setIsMiniMode(false);
+    try {
+      if (!isMiniMode) {
+        WindowSetMinSize(300, 300);
+        WindowSetSize(350, 480);
+        WindowSetAlwaysOnTop(true);
+      } else {
+        WindowSetMinSize(800, 600);
+        WindowSetSize(1024, 768);
+        WindowSetAlwaysOnTop(false);
+      }
+    } catch (e) {
+      console.warn("Wails runtime not available. Running in web mode.");
+    } finally {
+      setIsMiniMode(!isMiniMode);
     }
   };
 
