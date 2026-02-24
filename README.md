@@ -42,6 +42,8 @@
 
 ![main](./docs/main.png)
 
+![mini](./docs/mini.png)
+
 ---
 
 ## 🛠️ Installation & Download

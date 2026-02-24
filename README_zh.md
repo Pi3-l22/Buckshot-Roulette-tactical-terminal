@@ -43,6 +43,8 @@
 
 ![main](./docs/main.png)
 
+![mini](./docs/mini.png)
+
 ---
 
 ## 🛠️ 安装与下载体验
