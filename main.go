@@ -20,8 +20,8 @@ func main() {
 		Title:     "Buckshot Roulette Tactical Terminal",
 		Width:     1024,
 		Height:    768,
-		MinWidth:  800,
-		MinHeight: 600,
+		MinWidth:  300,
+		MinHeight: 300,
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},

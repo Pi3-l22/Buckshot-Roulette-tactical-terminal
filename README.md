@@ -31,6 +31,7 @@
   * **[C-Tier] Probabilistic Gambles**: Guides you on when to use Handcuffs and shoot the dealer based on percentage odds.
 * **Item Inventory Tracking**: Keep track of all your items and the dealer's state (Handcuffed, Sawed barrel).
 * **Smart Round Management**: Automatically inherits surviving HP from the previous round when reloading a new magazine.
+* **Mini Mode (Always on Top)**: Instantly shrink the terminal into a compact, pinned overlay that won't obscure your screen, allowing you to use it seamlessly alongside the full-screen game.
 * **Immersive UI**: Fully responsive, dark-mode terminal aesthetic complete with CRT scanlines and vignette effects.
 
 ---
@@ -51,8 +52,6 @@ We provide pre-built executables for **Windows**.
 2. Download the latest version (`buckshot-tactical-terminal-windows-amd64.exe`).
 3. Run the application directly. No installation required!
 
-> **Note for macOS and Linux users**: Automated builds for macOS and Linux have been removed. If you are on these platforms, you will need to build the application from source. Please refer to the **Building from Source** section below.
-
 ---
 
 ## 💻 Tech Stack
@@ -72,10 +71,6 @@ If you want to modify the code, or if you need to build the executable for **mac
 - [Go 1.23+](https://go.dev/dl/)
 - [Node.js 20+](https://nodejs.org/en/)
 - [Wails CLI](https://wails.io/docs/gettingstarted/installation) (`go install github.com/wailsapp/wails/v2/cmd/wails@latest`)
-
-> **For Linux users:** You will also need standard build dependencies. (e.g., on Ubuntu: `sudo apt install libgtk-3-dev libwebkit2gtk-4.1-dev build-essential pkg-config libnspr4-dev libnss3-dev libglib2.0-dev`).
-> 
-> **For macOS users:** You will need Xcode Command Line Tools (`xcode-select --install`).
 
 ### Steps
 1. Clone the repository:

@@ -1,5 +1,10 @@
 # Changelog / 更新日志
 
+## [v0.1.5] - 2026-02-24
+1. ✨ **New Feature (Mini Mode)**: Added a "Mini Mode" button that shrinks the application window into a highly compact, always-on-top overlay. This allows users to easily track probabilities and log actions without obscuring the main game.
+2. 💄 **Compact UI Redesign**: Designed a specialized layout for the Mini Mode featuring icon-only inventory mapping, minimal modal popups, and condensed HP/radar trackers to maximize screen economy.
+3. 🔧 **Window Bounds Adjustments**: Lowered Wails runtime `MinWidth` and `MinHeight` to allow seamless resizing down to mobile-like dimensions on the desktop.
+
 ## [v0.1.4] - 2026-02-24
 1. 🐛 **Build Fix**: Fixed a compilation error in `main.go` that broke the GitHub Actions release pipeline during the v0.1.3 build.
 2. 🖼️ **Icon Persistence**: The new app icon is now properly embedded during the build phase by utilizing the Wails built-in resource generator instead of manual `options.App` struct overrides.
